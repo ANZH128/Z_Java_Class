@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class average {
-
+//EDIT
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
    Scanner stdin = new Scanner(System.in);
