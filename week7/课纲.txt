@@ -1,0 +1,30 @@
+Array 数组
+Java 语言中提供的数组是用来存储固定大小的同类型元素。（格子里面的数据可以为空null）
+
+声明数组变量
+dataType[] arrayRefVar; //首选方法
+string int... 数组的名字
+
+dataType arrayRefVar[]; //效果相同，但不是首选方法
+
+例子
+
+double[] myList;
+
+创建数组
+arrayRefVar = new dataType[arraySize];
+arrayRefVar[0] = data;
+一、使用 dataType[arraySize] 创建了一个数组。
+二、把新创建的数组的引用赋值给变量 
+
+dataType[] arrayRefVar = {value0, value1, ..., valuek};
+int[] arrayA = {1,2,3,4,5,6};
+栈->全栈工程师 Full stack engineer（FSE）
+
+处理数组
+double[] myList = {1.9, 2.9, 3.4, 3.5};
+// 打印所有数组元素
+
+// 计算所有元素的总和
+
+// 查找最大元素
