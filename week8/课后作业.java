@@ -23,3 +23,9 @@ Tutorial Activities
  789 321
 5. Design a program that reads integers into an array of size[4][4], and then
  calculates if the smallest row total equals the smallest column total.
+
+6. Consider	a	university with	students,	salaried	employees	and	contract					
+					employees.	Everyone	has	a	name	and	address.	Students	have	a	'current	degree	
+					title'.	Employees	have	a	tax	file	number.	Salaried	employees	have	a	yearly	
+					salary	figure,	while	contract	employees	have	an	hourly	rate. What	are	likely
+					classes	for	this	system?
