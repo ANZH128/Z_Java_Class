@@ -1,0 +1,164 @@
+Java继承Inheritance
+1.继承的概念
+(1)继承是java面对对象编程技术的一块基石。因为它允许创建分等级层次的类。
+(2)继承就是子类继承父类的特征和行为。使得子类（实例）对象具有父类的实例域和方法。或子类从父类继承方法，使得子类具有父类相同的行为。
+2.生活中的继承：
+Class Animal{
+特点
+}
+Class GAnimal extends Animal{
+特点
+特点
+
+}
+Class Goat extends GAnimal{
+特点
+特点
+继承上面的特点
+}
+3.类的继承格式
+class 父类{
+}
+class 子类 extends 父类 {
+} 
+4.为什么我们要继承
+开发动物类。其中动物分别为企鹅penguin 老鼠Mouse
+要求如下：
+企鹅：属性（姓名，id），方法（吃，睡，自我介绍）
+老鼠：属性（姓名，id），方法（吃，睡，自我介绍）
+
+
+
+public class Penguin{
+	private String name;
+	private int id;
+
+	public Penguin(String myName, int myId){
+		name = myName;
+		id = myId;
+	}
+
+	public void eat(){
+		System.out.println("吃");
+	}
+
+	public void sleep(){
+		System.out.println("睡");
+	}
+
+	public void introduction(){
+		System.out.println("大家好！我是" +id +"号" + name +".");
+	}
+}
+
+public class Mouse{
+	private String name;
+	private int id;
+
+	public Mouse(String myName, int myId){
+		name = myName;
+		id = myId;
+	}
+
+	public void eat(){
+		System.out.println("吃");
+	}
+
+	public void sleep(){
+		System.out.println("睡");
+	}
+
+	public void introduction(){
+		System.out.println("大家好！我是" +id +"号" + name +".");
+	}
+}
+
+
+----------------------------------------------------------------------
+public class Animal{
+		private String name;
+	private int id;
+
+	public Animal(String myName, int myId){
+		name = myName;
+		id = myId;
+	}
+
+	public void eat(){
+		System.out.println("吃");
+	}
+
+	public void sleep(){
+		System.out.println("睡");
+	}
+
+	public void introduction(){
+		System.out.println("大家好！我是" +id +"号" + name +".");
+	}
+
+}
+
+//复用性
+
+public class Penguin extends Animal{
+	public Penguin(String myName,int myId){
+		super(myName,myId);
+	}
+}
+
+public class Mouse extends Animal{
+	}
+	public Mouse(String myName,int myId){
+		super(myName,myId);
+	}
+}
+
+---------------------------------------------------------------
+5.继承的特性
+	1.子类拥有父类的非private方法和属性。
+	2.子类可以拥有自己的属性和方法，子类可以对父类进行扩展。
+	3.子类可以用自己的方法实现父类的方法。（重载）override和overload
+	4.java的继承是单继承！！！！A继承B，B继承C。。。。
+	5.提高了类之间的耦合性。
+隔离性VS耦合性 ->编程中最大的矛盾！！！
+
+6.关键词
+extends
+super 我们可以通过super来实现对父类成员的访问。用来引用当前对象的父类。
+this 指向自己的引用
+
+class Animal{
+	void eat(){
+		System.out.println("animal:eat");
+	}
+}
+
+class Dog extends Animal{
+	void eat(){
+		System.out.println("dog:eat");
+	}
+
+	void eatTest(){
+		this.eat();
+		super.eat();
+	}
+}
+
+public class Test{
+	public static void main(String[] args) {
+		Animal a = new Animal();
+		a.eat();
+		Dog d = new Dog();
+		d.eatTest;	
+	}
+}
+
+-------------------------------------------------------
+implements->接口
+java是单继承多接口。
+
+
+public Mouse extends Animal implements jiao,tou{
+
+}
+-------------------------------------------------------
