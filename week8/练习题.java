@@ -31,7 +31,11 @@ BB	b	=	new	BB();
 CC	c	=	new	CC();
 What	will	be	printed?
 c.aa1();
+   CC.cc1
+   BB.aa1
+   AA.aa1
 c.aa3();
+   
 b.aa3();
 c.cc3();
 c.cc2();
