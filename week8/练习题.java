@@ -35,7 +35,16 @@ c.aa1();
    BB.aa1
    AA.aa1
 c.aa3();
-   
+   CC.cc1
+   AA.aa1
+   BB.aa3
 b.aa3();
+   AA.aa1
+   BB.aa3
 c.cc3();
+   AA.aa1
+   BB.aa3
+   CC.cc3
 c.cc2();
+   AA.aa1
+   CC.aa1
