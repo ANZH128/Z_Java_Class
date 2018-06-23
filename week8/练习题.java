@@ -31,20 +31,20 @@ BB	b	=	new	BB();
 CC	c	=	new	CC();
 What	will	be	printed?
 c.aa1();
-   CC.cc1
+   CC.aa1
    BB.aa1
-   AA.aa1
 c.aa3();
-   CC.cc1
-   AA.aa1
+   CC.cc3
    BB.aa3
 b.aa3();
-   AA.aa1
-   BB.aa3
+    BB.aa3
+    AA.aa1
 c.cc3();
-   AA.aa1
-   BB.aa3
-   CC.cc3
+    CC.cc3
+    AA.aa1
+    BB.aa3
+
 c.cc2();
-   AA.aa1
-   CC.aa1
+    CC.aa1
+    BB.aa1
+ 
