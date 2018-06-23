@@ -1,11 +1,36 @@
 Tutorial Objectives.
 To examine algorithms for accessing 1D arrays of reference variables and 2D arrays
 Tutorial Activities
- 1. The class Product is described below. Write a code segment for an array called
- productCatalogue to reference 10 products, read in product data, then display it
- and then find the product number(s) of products costing less than $20
+1. The class Product is described below. Write a code segment for an array called
+   productCatalogue to reference 10 products, read in product data, then display it
+   and then find the product number(s) of products costing less than $20
+      public class Product {
 
- 2. How many elements does the array int x[][] = new int[4][5] contain?
+	 public static void main(String[] args) {
+		// TODO Auto-generated method stub
+            int [] productCatalogue = {10,13,14,16,19,20,40,11,9,1};
+           //打印所有价格
+	   System.out.print("the prices are : ");
+           for (int i = 0; i < 10 ; i++) {
+    	
+    	    System.out.print("  " + productCatalogue[i]);
+       
+           }	  
+            System.out.println();
+            //打印所有比20小的价格
+	    System.out.print("the prices that are lower than 20 : ");
+           for (int a = 0; a < 10 ; a++) {
+    
+           if (productCatalogue[a] < 20) {
+        	System.out.print("  "+productCatalogue[a]);
+              }
+       }
+	  }
+
+}
+
+ 2. How many elements does the array int x[][] = new int[4][5] contain? 
+	 20
  3. Design a program to read integers into an integer array of size [3][3]. Treat the
  array as a 3 * 3 image. For example, it may contain the image:
  123
@@ -17,6 +42,36 @@ Tutorial Activities
  654
  987
  This new image would then be printed out.
+	 package homework;
+
+public class task1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    //打印二维数组
+	  int[][] square = new int [][] {{1,2,3},{4,5,6},{7,8,9,}};
+      for(int row = 0 ; row < square.length;row ++) {
+    	  for(int column =0 ; column < square[row].length;column ++) {
+    		  System.out.print(square[row][column]);
+    	  }
+     System.out.println( );
+     }
+	//反转二维数组
+      System.out.println( );
+      for (int j = 0; j < square.length / 2; j++) {
+    	 for (int k = 0; k <  square[j].length / 2; k++) {
+    		 int reverse = square[j][k];
+    	     square[j][k] = square[square.length - 1 - j][k];
+    	     square[square.length - 1 - j][k] = reverse; 
+    	     
+    	   }
+    	     }
+    	  
+	System.out.println();
+	}
+	
+	
+	}
+}
  4. Now modify your algorithm to rotate the original image 180 degrees.
  123 becomes 987
  456 654
