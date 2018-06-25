@@ -84,3 +84,33 @@ public class task1 {
 					title'.	Employees	have	a	tax	file	number.	Salaried	employees	have	a	yearly	
 					salary	figure,	while	contract	employees	have	an	hourly	rate. What	are	likely
 					classes	for	this	system?
+package homework;
+
+public class university {
+     private String nam;
+     private int add;
+     private String d;
+     private int tax;
+     private int yearly;
+     private int hourly;
+	public class Everyone{
+		public void everybody(String name, int address){
+			nam = name;
+			add = address;
+	}
+}
+    public class Students extends Everyone{
+    	public void students(String degree){
+    		d = degree;
+    	}
+    }
+    public class Employees extends Everyone{
+   
+    		public void Salariedemployees(int yearly) {
+    	}
+            public void Contractdemployees(int hourly) {
+	    }
+   }
+ 
+}
+
