@@ -73,9 +73,9 @@ public class Mode {
          }
           
           System.out.println("      游戏结束");//结束语
-          System.out.println("   总局数:" + i);//打印总局数       
+          System.out.println("   总局数:" + (i-1));//打印总局数       
           System.out.println("   胜的局数:" + won);//打印赢的局数
-          System.out.print("   胜率:" + (double)won/i * 100 + "%");//打印胜率
+          System.out.print("   胜率:" + (double)won/(i-1) * 100 + "%");//打印胜率
       }    
     public void Free() {
     //引语
