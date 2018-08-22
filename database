@@ -1,0 +1,83 @@
+RM for games:
+Games ( gameID, gameName, release_date, rating, size)
+Identification (gameID, type, gameCompany)
+Creator (name, birth, gameID, gameName)
+
+
+
+MySQL:
+create table Games（
+gameID Integer，
+gameName Varchar（10），
+release_date Date，
+rating Integer，
+size char (20)，
+Primary key （gameID）
+）；
+
+create table Identification (
+gameID Integer,
+type Varchar (8),
+gameCompany Varchar （10），
+Primary key(gameID , type),
+Foreign key(gameID)References Games (gameID)
+);
+ 
+
+
+
+create table creator（
+name Varchar（10),
+birth Date,
+gameID Integer,
+gameName Varchar(10),
+Primary key (name),
+Foreign key(gameID) References Movie(gameID),
+);
+
+
+
+
+RM for movies:
+Movie（movID，title Varchar，release_date，rating Char，length）；
+Identification (movID , genre);
+Cast（name Varchar, birth ,movID , title）;
+Direct(direct_name, studio, movID);
+
+
+
+MySQL:
+create table Movie（
+movID Integer，
+title Varchar（10），
+release_date Date，
+rating Char（5），
+length Integer，
+Primary key （movID）
+）；
+
+create table Identification (
+movID Integer,
+genre Varchar (8),
+Primary key(movID ,genre),
+Foreign key(movID)References Movie(movID)
+);
+
+
+
+
+create table Cast（
+name Varchar（10),
+birth Date,
+movID Integer,
+title Varchar(10),
+Primary key (name),
+Foreign key(movID)References Movie(movID)
+);
+
+create table Direct(
+direct_name Varchar(10),
+studio Varchar(15),
+movID Integer,
+Primary key(direct_name)References Movie (movID)
+);
